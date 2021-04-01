@@ -1,0 +1,45 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(37, 37, 37, 0.95);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    border: 1px white solid;
+    padding: 5px;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+nav ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul li:hover{
+    transform: scale(1.05);
+}
+
+.nav-link{
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    font-size: 1.4rem;
+}
+
+.nav-link:hover{
+    color: white;
+    transform: scale(1.02);
+}
