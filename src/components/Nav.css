@@ -9,6 +9,7 @@ nav{
     z-index: 9999;
 }
 
+/* logo */
 .logo{
     color: white;
     text-decoration: none;
@@ -22,6 +23,7 @@ nav{
     transform: scale(1.05);
 }
 
+/* nav pages */
 nav ul{
     width: 60%;
     display: flex;
@@ -42,4 +44,28 @@ nav ul li:hover{
 .nav-link:hover{
     color: white;
     transform: scale(1.02);
+}
+
+/* shopping cart */
+.shopping-cart-container{
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shopping-cart{
+    width: 1.9rem;
+    filter: invert(100%);
+}
+
+.shopping-cart-container:hover{
+    transform: scale(1.2);
+}
+
+.shopping-cart-amount{
+    color: white;
+    font-size: 1.2rem;
+    margin: 2px;
 }

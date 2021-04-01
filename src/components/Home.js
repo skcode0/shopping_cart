@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
-import animatedHalo from '../img/halo_infinite_vid.mkv';
-import haloInfLogo from '../img/Halo_Infinite_-_Logo_for_light.png';
+import animatedHalo from '../img/Halo_Infinite/halo_infinite_vid.mkv';
+import haloInfLogo from '../img/Halo_Infinite/Halo_Infinite_-_Logo_for_light.png';
 import { Link } from "react-router-dom";
 
 export default function Home(){
@@ -13,6 +13,7 @@ export default function Home(){
 
             <div className="halo-info">
                 <img className="halo-logo" src={haloInfLogo} alt="Halo Infinity"/>
+                {/* //! link to halo page */}
                 <button><Link className="link" to="/shop">Pre-Order Now</Link></button>
             </div>
         </main>
