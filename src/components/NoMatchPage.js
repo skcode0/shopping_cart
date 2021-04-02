@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import './NoMatchPage.css';
 
 
 export default function NoMatchPage({ location }){
     return(
-        <>
-            <div>404 - Not Found</div>
+        <div className="error-container">
+            <p>404 - Not Found</p>
             <p>No Match found for ' {location.pathname} '</p>
-            <Link to="/">Return Home</Link>
-        </>
+            <Link className="home-btn" to="/">Return Home</Link>
+        </div>
     )
 }

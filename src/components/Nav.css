@@ -47,7 +47,7 @@ nav ul li:hover{
 }
 
 /* shopping cart */
-.shopping-cart-container{
+.shopping-cart-img-container{
     margin-right: 10%;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ nav ul li:hover{
     filter: invert(100%);
 }
 
-.shopping-cart-container:hover{
+.shopping-cart-img-container:hover{
     transform: scale(1.2);
 }
 

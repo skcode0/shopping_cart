@@ -1,0 +1,27 @@
+.game-info-link{
+    text-decoration: none;
+    color: black;
+}
+
+.game-info{
+    margin: 5px;
+    padding: 10px;
+}
+
+.game-info:hover{
+    background-color: rgb(156, 156, 156);
+}
+
+.cover-img{
+    width: 400px;
+    height: 200px;
+}
+
+.game-name{
+    letter-spacing: 1px;
+    width: 400px;
+}
+
+.snapshots{
+    width: 100px;
+}

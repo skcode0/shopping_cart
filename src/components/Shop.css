@@ -1,0 +1,5 @@
+.shop-container{
+    display: flex;
+    height: 100%;
+    border: 1px blue solid;
+}

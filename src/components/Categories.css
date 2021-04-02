@@ -1,0 +1,45 @@
+.platform-container{
+    background-color: rgb(31, 31, 31);
+    /* height: 100%; */
+    width: 40%;
+    margin-right: 3rem;
+    font-size: 2rem;
+}
+
+.platform-container ul{
+    margin: 2rem;
+    list-style: none;
+}
+
+.platform-list{
+    margin: 1rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color:rgb(212, 212, 212)
+}
+
+.platform-list:hover{
+    color: white;
+}
+
+.platform-list::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: auto;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+.platform-list:hover::after{
+    visibility: visible;
+    transform: scaleX(1);
+}

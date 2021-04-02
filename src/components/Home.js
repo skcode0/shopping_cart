@@ -14,7 +14,7 @@ export default function Home(){
             <div className="halo-info">
                 <img className="halo-logo" src={haloInfLogo} alt="Halo Infinity"/>
                 {/* //! link to halo page */}
-                <button><Link className="link" to="/shop">Pre-Order Now</Link></button>
+                <button><Link className="link" to="/shop/Halo%20Infinite">Learn More</Link></button>
             </div>
         </main>
     )
