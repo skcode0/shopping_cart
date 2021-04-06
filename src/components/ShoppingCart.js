@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import AddedItem from './AddedItem';
-import { OpenCartContext } from './contexts/ShoppingCartContext';
+import { OpenCartContext, AddedGamesContext, CheckAddedGamesContext } from './contexts/ShoppingCartContext';
 import './ShoppingCart.css';
-
 
 export default function ShoppingCart(){
     const [isOpen, setIsOpen] = useContext(OpenCartContext);
+    const [addedGames, setAddedGames] = useContext(AddedGamesContext);
+    const [checkAddedGames, setCheckAddedGames] = useContext(CheckAddedGamesContext);
 
     // close shopping cart div
     function closeShoppingCart(){
@@ -18,6 +19,10 @@ export default function ShoppingCart(){
             <div className="added-items-container">
                 <h3 className="my-shopping-cart">My Shopping Cart</h3>
                 {/* //! if item in shopping page clicked, add it to here */}
+                {
+                    
+                    addedGames.map(game => <AddedItem key={game.name} />)
+                }
                 <button className="checkout-btn">CHECKOUT</button>
             </div>
             

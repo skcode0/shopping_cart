@@ -10,7 +10,7 @@ export default function Catagories(){
     }
 
     return(
-        <aside className="platform-container">
+        <div className="platform-container">
             <ul>
                 <li className="platform-list" onClick={e => saveTextContent(e)}>All Platforms</li>
                 <li className="platform-list" onClick={e => saveTextContent(e)}>PC</li>
@@ -18,6 +18,6 @@ export default function Catagories(){
                 <li className="platform-list" onClick={e => saveTextContent(e)}>PlayStation</li>
                 <li className="platform-list" onClick={e => saveTextContent(e)}>Nintendo</li>
             </ul>
-        </aside>
+        </div>
     )
 }

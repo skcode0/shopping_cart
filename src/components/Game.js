@@ -9,10 +9,6 @@ export default function Game(props){
                 <img className="cover-img" src={props.coverImg} alt={props.coverImg}/>
                 <h2 className="game-name">{props.name}</h2>
                 <p>{props.price}</p>
-                {/* //! when img clicked, go to specific link and display pics and other info */}
-                {/* {
-                    props.snapshots.map(pic => <img className="snapshots" key={pic} src={pic} alt={pic} />)
-                } */}
             </div>
         </Link>
     )

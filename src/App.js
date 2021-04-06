@@ -7,7 +7,8 @@ import Shop from './components/Shop';
 import ShoppingCart from './components/ShoppingCart';
 import NoMatchPage from './components/NoMatchPage';
 import { ShoppingCartProvider } from './components/contexts/ShoppingCartContext';
-import Game from './components/Game';
+import GameDetails from './components/GameDetails';
+
 import { PlatformProvider } from './components/contexts/PlatformContext';
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/shop" component={Shop} />
-            <Route exact path="/shop/:name" component={Game}/>
+            <Route exact path="/shop/:name" component={GameDetails}/>
             <Route component={NoMatchPage} />
           </Switch>
         </BrowserRouter>

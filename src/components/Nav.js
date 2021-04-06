@@ -3,14 +3,22 @@ import { Link } from "react-router-dom";
 import './Nav.css';
 import shoppingCartImg from '../img/shopping-cart.svg';
 import { ShoppingCartContext, OpenCartContext } from './contexts/ShoppingCartContext';
+import { PlatformContext } from './contexts/PlatformContext';
 
 export default function Nav(){
     const [cartAmount] = useContext(ShoppingCartContext);
     const [isOpen, setIsOpen] = useContext(OpenCartContext);
+    const [platform, setPlatform] = useContext(PlatformContext);
+
 
     // open 'ShoppingCart.js'
     function openShoppingCart(){
         setIsOpen(true);
+    }
+
+    // reset games filter
+    function resetGamesFilter(){
+        setPlatform("All Platforms");
     }
 
     return (
@@ -18,9 +26,8 @@ export default function Nav(){
             <Link to="/" className="logo">VARIETY GAMES</Link>
             <ul>
                 <li><Link to='/' className="link nav-link">Home</Link></li>
-                <li><Link to='/shop' className="link nav-link">Shop Games</Link></li>
+                <li><Link to='/shop' className="link nav-link" onClick={resetGamesFilter}>Shop Games</Link></li>
             </ul>
-            {/* //! when clicked, slide out cart div from right; change what's in the cart */}
             <div className="shopping-cart-img-container" onClick={openShoppingCart}>
                 <img className="shopping-cart" src={shoppingCartImg} alt="shopping cart"/>
                 <span className="shopping-cart-amount">({cartAmount})</span>

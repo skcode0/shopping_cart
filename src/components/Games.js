@@ -35,6 +35,7 @@ export default function Games(){
                     gamesInfo.map(game => <Game key={game.name} {...game}/>)
                 )
         }
+        
     }
 
     return(

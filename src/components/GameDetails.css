@@ -1,0 +1,118 @@
+.game-details-container{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.game-details-container h1{
+    font-size: 2.5rem;
+}
+
+.screen-buy-container{
+    border: 1px blue solid;
+    display: grid;
+    grid: 1fr / repeat(3, 1fr);
+}
+
+
+/* screenshots */
+.main-screenshot{
+    position: relative;
+    grid-column: 1 / 3;
+    border: 1px orange solid;
+}
+
+.main-screenshot button{
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.main-screenshot button:hover{
+    background-color:rgb(92, 92, 92);
+}
+
+.go-left{
+    left: 0;
+}
+
+.go-right{
+    right: 0;
+}
+
+.screenshots{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* but game container */
+.buy-game{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    justify-content: space-between;
+    border: 1px red solid;
+    background-color: rgb(56, 56, 56);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.buy-game img{
+    width: 100%;
+}
+
+.game-price{
+    text-align: right;
+    margin: 1rem 2rem;
+}
+
+
+.price-cart-div button{
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2rem;
+    width: 90%;
+    display: block;
+    margin:  1rem auto;
+    border-radius: 3px;
+}
+
+.price-cart-div button:hover{
+    box-shadow: 5px 5px 10px rgb(29, 29, 29);
+}
+
+
+/* extra-info */
+.extra-info-container{
+    margin: auto;
+    width: 95%;
+    word-wrap: break-word;
+}
+
+.extra-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.extra-info-title{
+    color: rgb(170, 170, 170)
+}
+
+.desc{
+    width: 60%;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+}
+
