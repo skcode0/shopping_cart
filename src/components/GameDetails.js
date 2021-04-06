@@ -15,7 +15,7 @@ export default function GameDetails({match}){
     const [checkAddedGames, setCheckAddedGames] = useContext(CheckAddedGamesContext);
 
     function addToCart(e){
-        if(e.target.textContent === "Add to Cart"){
+        if(e.target.textContent === "Add to Cart" && !checkAddedGames.includes(filteredGameObj.name)){
             setCartAmount(prevState => prevState + 1);
             setAddedGames(prevArr => prevArr.concat(filteredGameObj));
             setCheckAddedGames(prevArr => prevArr.concat(filteredGameObj.name));
@@ -71,7 +71,7 @@ export default function GameDetails({match}){
                     </div>
 
                     <div className="price-cart-div">
-                        <p className="game-price">{filteredGameObj.price}</p>
+                        <p className="game-price">{typeof filteredGameObj.price === "number" ? `$${filteredGameObj.price}` : filteredGameObj.price}</p>
                         <button onClick={e => addToCart(e)}>{ filteredGameObj.price === "TBC" ? "Not Available Yet" : "Add to Cart"}</button>
                     </div>
                 </div>

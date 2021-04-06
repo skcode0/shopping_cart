@@ -59,7 +59,7 @@ let gamesInfo = [
     {
         name: "Back 4 Blood",
         platform: ["pc", "xbox", "playstation"],
-        price: "$59.99",
+        price: 59.99,
         coverImg: b4bCoverImg,
         snapshots: [b4b1, b4b2, b4b3, b4b4, b4b5],
         releaseDate: "June 18, 2021",
@@ -89,7 +89,7 @@ let gamesInfo = [
     {
         name: "Monster Hunter Rise",
         platform: ["pc", "nintendo"],
-        price: "$59.99",
+        price: 59.99,
         coverImg: MHRCoverImg,
         snapshots: [mhr1, mhr2, mhr3, mhr4, mhr5],
         releaseDate: "March 26, 2021",
@@ -99,7 +99,7 @@ let gamesInfo = [
     {
         name: "NieR Replicant™ ver.1.22474487139...",
         platform: ["pc", "xbox", "playstation"],
-        price: "$59.99",
+        price: 59.99,
         coverImg: nierRepCoverImg,
         snapshots: [nier1, nier2, nier3, nier4, nier5],
         releaseDate: "April 23, 2021",
@@ -109,7 +109,7 @@ let gamesInfo = [
     {
         name: "Resident Evil Village",
         platform: ["pc", "xbox", "playstation"],
-        price: "$59.99",
+        price: 59.99,
         coverImg: REVCoverImg,
         snapshots: [REV1, REV2, REV3, REV4, REV5],
         releaseDate: "May 7, 2021",
@@ -119,7 +119,7 @@ let gamesInfo = [
     {
         name: "Returnal",
         platform: ["playstation"],
-        price: "$69.99",
+        price: 69.99,
         coverImg: returnalCoverImg,
         snapshots: [returnal1, returnal2, returnal3, returnal4, returnal5],
         releaseDate: "April 30, 2021",
@@ -129,7 +129,7 @@ let gamesInfo = [
     {
         name: "Valheim",
         platform: ["pc"],
-        price: "$19.99",
+        price: 19.99,
         coverImg: valheimCoverImg,
         snapshots: [valheim1, valheim2, valheim3, valheim4, valheim5],
         releaseDate: "February 2, 2021",

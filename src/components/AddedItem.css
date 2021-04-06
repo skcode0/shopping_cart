@@ -1,0 +1,8 @@
+.added-items-container{
+    margin: 10px;
+    border: 1px red solid;
+}
+
+.added-item-coverImg{
+    width: 100%;
+}

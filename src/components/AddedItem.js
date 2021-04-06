@@ -1,31 +1,69 @@
-import React, { useState, useContext } from 'react';
-import { AddedGamesContext, CheckAddedGamesContext } from './contexts/ShoppingCartContext';
+import React, { useState, useContext, useEffect } from 'react';
+import { ShoppingCartContext, AddedGamesContext, CheckAddedGamesContext } from './contexts/ShoppingCartContext';
+import './AddedItem.css';
 
-
-export default function AddedItem(){
-    const [ count, setCount ] = useState(1);
+export default function AddedItem(props){
+    const [count, setCount] = useState(1);
+    const [total, setTotal] = useState(props.price);
 
     const [addedGames, setAddedGames] = useContext(AddedGamesContext);
     const [checkAddedGames, setCheckAddedGames] = useContext(CheckAddedGamesContext);
+    const [cartAmount, setCartAmount] = useContext(ShoppingCartContext);
 
 
+    useEffect(() => {
+        setTotal(props.price * count);
+        props.setSubtotalObj(prevObj => (
+            {
+                ...prevObj, 
+                [props.name]: total
+            }
+        ));
+    }, [count, total]);
+
+    function decrementAmount(){
+        if(count > 1){
+            setCount(prevCount => prevCount = prevCount - 1);
+        }
+        else{
+            setCount(0);
+            props.setSubtotalObj(prevObj => (
+                {
+                    ...prevObj, 
+                    [props.name]: 0
+                }
+            ));
+            setCheckAddedGames(checkAddedGames.filter(game => game !== props.name));
+            setAddedGames(addedGames.filter(game => game.name !== props.name));
+            setCartAmount(prevAmount => prevAmount = prevAmount - 1);
+        }
+    }
+
+    function incrementAmount(){
+        if(count === ""){
+            setCount(0);
+        }
+        setCount(prevCount => prevCount = prevCount + 1);
+    }
     
     return(
-        <div>
+        <div className="added-items-container">
             {
-                count > 0 && (
-                <div>
-                    <img src="" alt=""/>
-                    <h4>Game Title</h4>
-                    <p>Price</p>
-                    <div className="game-amount">
-                        <button onClick={() => setCount(prevCount => prevCount = prevCount > 0 ? prevCount - 1: 0)}>-</button>
-                        <input type="number" value={count} onChange={e => setCount(e.target.value)}/>
-                        <button onClick={() => setCount(prevCount => prevCount = prevCount + 1)}>+</button>
+                (count > 0 || count === "") && (
+                    <div key={props.name}>
+                        <img className="added-item-coverImg" src={props.coverImg} alt={props.coverImg}/>
+                        <h4>{props.name}</h4>
+                        <p>${props.price}</p>
+                        <div className="game-amount">
+                            <button onClick={decrementAmount}>-</button>
+                            <input type="number" value={count} onChange={e => (e.target.value === "" || +e.target.value < 1) ? setCount("") : setCount(+e.target.value)}/>
+                            <button onClick={incrementAmount}>+</button>
+                        </div>
                     </div>
-                </div>
                 )
             }
+            <div>{total.toFixed(2)}</div>
+            <div>{JSON.stringify(checkAddedGames)}</div>
         </div>
     )
 }
