@@ -39,12 +39,12 @@ export default function ShoppingCart(){
                 {
                     addedGames.map(game => <AddedItem key={game.name} {...game} subtotalObj={subtotalObj} setSubtotalObj={setSubtotalObj}/>)
                 }
-                <h2>SubTotal: ${subtotal.toFixed(2)}</h2>
+                <h2 className="subtotal">SubTotal: ${subtotal.toFixed(2)}</h2>
                 {
-                    checkAddedGames.length === 0 && <p>Cart is Empty</p>
+                    checkAddedGames.length === 0 && <p className="empty-cart">Cart is Empty</p>
                 }
                 {
-                    checkAddedGames.length > 0 && <button className="checkout-btn" onClick={checkOut}><Link to="/afterpurchase">CHECKOUT</Link></button>
+                    checkAddedGames.length > 0 && <Link to="/afterpurchase"><button className="checkout-btn" onClick={checkOut}>CHECKOUT</button></Link>
                 }
             </div>
             

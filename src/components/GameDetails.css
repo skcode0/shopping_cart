@@ -1,6 +1,7 @@
 .game-details-container{
     width: 90%;
     margin: 1rem auto;
+    border: 1px orange solid;
 }
 
 .game-details-container h1{
@@ -9,6 +10,7 @@
 
 .screen-buy-container{
     display: grid;
+    height: 100%;
     grid: 1fr / repeat(3, 1fr);
 }
 

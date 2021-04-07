@@ -1,8 +1,59 @@
-.added-items-container{
+.added-item{
     margin: 10px;
-    border: 1px red solid;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(27, 27, 27);
+    padding: 10px;
 }
 
 .added-item-coverImg{
-    width: 100%;
+    width: 50%;
+    /* flex: 1; */
+}
+
+.added-item-info{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-amount{
+    display: flex;
+    /* border: 1px red solid; */
+}
+
+/* dec/inc btn */
+.game-amount button{
+    font-size: 1.5rem;
+    padding: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    flex: 1;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.game-amount button:hover{
+    color: rgb(211, 211, 211);
+}
+
+/* input */
+.game-amount input{
+    width: 40%;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

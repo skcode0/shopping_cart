@@ -47,23 +47,24 @@ export default function AddedItem(props){
     }
     
     return(
-        <div className="added-items-container">
+        <>
             {
                 (count > 0 || count === "") && (
-                    <div key={props.name}>
+                    <div className="added-item">
                         <img className="added-item-coverImg" src={props.coverImg} alt={props.coverImg}/>
-                        <h4>{props.name}</h4>
-                        <p>${props.price}</p>
-                        <div className="game-amount">
-                            <button onClick={decrementAmount}>-</button>
-                            <input type="number" value={count} onChange={e => (e.target.value === "" || +e.target.value < 1) ? setCount("") : setCount(+e.target.value)}/>
-                            <button onClick={incrementAmount}>+</button>
+                        <div className="added-item-info">
+                            <h3>{props.name}</h3>
+                            <p>${props.price}</p>
+                            <div className="game-amount">
+                                <button onClick={decrementAmount}>−</button>
+                                <input type="number" value={count} onChange={e => (e.target.value === "" || +e.target.value < 1) ? setCount("") : setCount(+e.target.value)}/>
+                                <button onClick={incrementAmount}>+</button>
+                            </div>
                         </div>
+                        
                     </div>
                 )
             }
-            <div>{total.toFixed(2)}</div>
-            <div>{JSON.stringify(checkAddedGames)}</div>
-        </div>
+        </>
     )
 }

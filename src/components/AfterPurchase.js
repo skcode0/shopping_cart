@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './AfterPurchase.css';
 
 export default function AfterPurchase(){
     return(
-        <div>
-            <div>Thank you for the purchase.</div>
-            <Link to='/'>Return Home</Link>
+        <div className="afterpurchase">
+            <p>Thank you for the purchase.</p>
+            <Link to='/'><button className="return-home">Return Home</button></Link>
         </div>
     )
 }
