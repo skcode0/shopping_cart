@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import AddedItem from './AddedItem';
 import { ShoppingCartContext, OpenCartContext, AddedGamesContext, CheckAddedGamesContext } from './contexts/ShoppingCartContext';
 import './ShoppingCart.css';
+import { Link } from 'react-router-dom';
 
 export default function ShoppingCart(){
     const [cartAmount, setCartAmount] = useContext(ShoppingCartContext);
@@ -21,7 +22,6 @@ export default function ShoppingCart(){
         setIsOpen(false);
     }
 
-    // !
     function checkOut(){
         // clear cart
         setCartAmount(0);
@@ -39,14 +39,12 @@ export default function ShoppingCart(){
                 {
                     addedGames.map(game => <AddedItem key={game.name} {...game} subtotalObj={subtotalObj} setSubtotalObj={setSubtotalObj}/>)
                 }
-                {/* //! figure out subtotal addition */}
                 <h2>SubTotal: ${subtotal.toFixed(2)}</h2>
-                {/* //! add onclick for checkout btn; link to "after purchase page" */}
                 {
                     checkAddedGames.length === 0 && <p>Cart is Empty</p>
                 }
                 {
-                    checkAddedGames.length > 0 && <button className="checkout-btn" onClick={checkOut}>CHECKOUT</button>
+                    checkAddedGames.length > 0 && <button className="checkout-btn" onClick={checkOut}><Link to="/afterpurchase">CHECKOUT</Link></button>
                 }
             </div>
             

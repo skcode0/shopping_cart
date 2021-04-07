@@ -8,25 +8,28 @@ import ShoppingCart from './components/ShoppingCart';
 import NoMatchPage from './components/NoMatchPage';
 import { ShoppingCartProvider } from './components/contexts/ShoppingCartContext';
 import GameDetails from './components/GameDetails';
-
+import AfterPurchase from './components/AfterPurchase';
 import { PlatformProvider } from './components/contexts/PlatformContext';
 
 const App = () => {
   return (
-    <ShoppingCartProvider>
-      <PlatformProvider>
-        <BrowserRouter>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/shop/:name" component={GameDetails}/>
-            <Route component={NoMatchPage} />
-          </Switch>
-        </BrowserRouter>
-        <ShoppingCart />
-      </PlatformProvider>
-    </ShoppingCartProvider>
+    <div className="app">
+      <ShoppingCartProvider>
+        <PlatformProvider>
+          <BrowserRouter>
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/shop" component={Shop} />
+              <Route exact path="/shop/:name" component={GameDetails}/>
+              <Route exact path="/afterpurchase" component={AfterPurchase} />
+              <Route component={NoMatchPage} />
+            </Switch>
+            <ShoppingCart />
+          </BrowserRouter>
+        </PlatformProvider>
+      </ShoppingCartProvider>
+    </div>
   );
 };
 
