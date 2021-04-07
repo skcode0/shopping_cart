@@ -23,10 +23,10 @@ export default function Nav(){
 
     return (
         <nav>
-            <Link to="/" className="logo">VARIETY GAMES</Link>
+            <Link to="/shopping_cart/" className="logo">VARIETY GAMES</Link>
             <ul>
-                <li><Link to='/' className="link nav-link">Home</Link></li>
-                <li><Link to='/shop' className="link nav-link" onClick={resetGamesFilter}>Shop Games</Link></li>
+                <li><Link to='/shopping_cart/' className="link nav-link">Home</Link></li>
+                <li><Link to='/shopping_cart/shop' className="link nav-link" onClick={resetGamesFilter}>Shop Games</Link></li>
             </ul>
             <div className="shopping-cart-img-container" onClick={openShoppingCart}>
                 <img className="shopping-cart" src={shoppingCartImg} alt="shopping cart"/>

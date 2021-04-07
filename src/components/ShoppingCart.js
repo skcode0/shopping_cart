@@ -44,7 +44,7 @@ export default function ShoppingCart(){
                     checkAddedGames.length === 0 && <p className="empty-cart">Cart is Empty</p>
                 }
                 {
-                    checkAddedGames.length > 0 && <Link to="/afterpurchase"><button className="checkout-btn" onClick={checkOut}>CHECKOUT</button></Link>
+                    checkAddedGames.length > 0 && <Link to="/shopping_cart/afterpurchase"><button className="checkout-btn" onClick={checkOut}>CHECKOUT</button></Link>
                 }
             </div>
             

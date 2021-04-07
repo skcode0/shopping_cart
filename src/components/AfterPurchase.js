@@ -6,7 +6,7 @@ export default function AfterPurchase(){
     return(
         <div className="afterpurchase">
             <p>Thank you for the purchase.</p>
-            <Link to='/'><button className="return-home">Return Home</button></Link>
+            <Link to='/shopping_cart/'><button className="return-home">Return Home</button></Link>
         </div>
     )
 }

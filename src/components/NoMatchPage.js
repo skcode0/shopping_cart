@@ -8,7 +8,7 @@ export default function NoMatchPage({ location }){
         <div className="error-container">
             <p>404 - Not Found</p>
             <p>No Match found for ' {location.pathname} '</p>
-            <Link className="home-btn" to="/">Return Home</Link>
+            <Link className="home-btn" to="/shopping_cart/">Return Home</Link>
         </div>
     )
 }

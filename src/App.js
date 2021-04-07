@@ -19,10 +19,10 @@ const App = () => {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/shop" component={Shop} />
-              <Route exact path="/shop/:name" component={GameDetails}/>
-              <Route exact path="/afterpurchase" component={AfterPurchase} />
+              <Route exact path="/shopping_cart/" component={Home} />
+              <Route exact path="/shopping_cart/shop" component={Shop} />
+              <Route exact path="/shopping_cart/shop/:name" component={GameDetails}/>
+              <Route exact path="/shopping_cart/afterpurchase" component={AfterPurchase} />
               <Route component={NoMatchPage} />
             </Switch>
             <ShoppingCart />
