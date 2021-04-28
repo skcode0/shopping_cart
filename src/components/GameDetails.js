@@ -58,7 +58,7 @@ export default function GameDetails({match}){
                     <div className="extra-info-container">
                         <div className="extra-info">
                             <p className="extra-info-title">Decription</p>
-                            <p className="desc">{filteredGameObj.overview}</p>
+                            <p className="desc overview">{filteredGameObj.overview}</p>
                         </div>
                         <div className="extra-info">
                             <p className="extra-info-title">Release Date</p>

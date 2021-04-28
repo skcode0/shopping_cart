@@ -25,7 +25,7 @@ export default function Nav(){
         <nav>
             <Link to="/shopping_cart/" className="logo">VARIETY GAMES</Link>
             <ul>
-                <li><Link to='/shopping_cart/' className="link nav-link">Home</Link></li>
+                <li><Link to='/shopping_cart/' className="link nav-link home">Home</Link></li>
                 <li><Link to='/shopping_cart/shop' className="link nav-link" onClick={resetGamesFilter}>Shop Games</Link></li>
             </ul>
             <div className="shopping-cart-img-container" onClick={openShoppingCart}>

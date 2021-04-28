@@ -69,3 +69,61 @@ nav ul li:hover{
     font-size: 1.2rem;
     margin: 2px;
 }
+
+@media only screen and (max-width: 980px) {
+    .logo, .nav-link{
+        font-size: 1rem;
+
+    }
+
+    .shopping-cart{
+        width: 1.5rem;
+    }   
+    
+    .shopping-cart-amount{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    nav ul{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    nav ul{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .logo{
+        margin-left: 0;
+    }
+
+    .home{
+        display: none;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav{
+        padding: 16px 10px;
+    }
+
+    .logo{
+        text-align: center;
+        padding: 3px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .logo, .nav-link{
+        font-size: 0.8rem;
+    }
+}

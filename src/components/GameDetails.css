@@ -53,8 +53,6 @@
 /* but game container */
 .buy-game{
     margin: auto;
-    height: fit-content;
-    width: fit-content;
     justify-content: space-between;
     background-color: rgb(56, 56, 56);
     font-size: 1.5rem;
@@ -113,3 +111,27 @@
     word-wrap: break-word;
 }
 
+.overview{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .buy-game{
+        font-size: 1.2rem;
+    }
+
+    .desc{
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .buy-game{
+        padding-bottom: 1rem;
+    }
+
+    .screen-buy-container{
+        display: initial;
+    }
+}
